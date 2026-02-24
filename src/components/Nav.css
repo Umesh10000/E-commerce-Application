@@ -1,0 +1,18 @@
+nav{
+    background-color: black;
+}
+nav >ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 30px;
+}
+ul >li>a{
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 23px;
+    letter-spacing: 1.2px;
+    color: thistle;
+}

@@ -1,0 +1,27 @@
+.cart{
+     background: linear-gradient(violet,white,skyblue);
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 500px;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+     height: 100vh;
+}
+.cart >div{
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    box-shadow: 2px 3px 4px black;
+}
+img{
+    width: 30%;
+}
+.cart >h1{
+    text-transform: uppercase;
+    text-align: justify;
+}
