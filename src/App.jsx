@@ -34,7 +34,7 @@ const App = () => {
   ]);
 
   return (
-    <div>
+    <div className="app">
       <myContext.Provider value={{ ...state, Dispatch }}>
         <RouterProvider router={myRouter}></RouterProvider>
       </myContext.Provider>
