@@ -193,3 +193,78 @@
 .btn-shop:hover {
   opacity: 0.85;
 }
+
+/* ══════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+══════════════════════════════════ */
+
+/* ── Tablet (≤ 900px) ── */
+@media (max-width: 900px) {
+  .cart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cart-summary-inner {
+    max-width: 100%;
+  }
+}
+
+/* ── Mobile (≤ 600px) ── */
+@media (max-width: 600px) {
+  .cart-page {
+    padding: 16px 10px;
+  }
+
+  .cart-title {
+    font-size: 1.5rem;
+  }
+
+  .cart-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cart-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .cart-card img {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+  }
+
+  .cart-item-title {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .cart-item-price {
+    font-size: 1rem;
+  }
+
+  .cart-summary {
+    justify-content: center;
+  }
+
+  .cart-summary-inner {
+    padding: 20px 16px;
+  }
+
+  .cart-summary-inner h3 {
+    font-size: 1.1rem;
+  }
+
+  .cart-total {
+    font-size: 1rem;
+  }
+
+  .btn-checkout {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

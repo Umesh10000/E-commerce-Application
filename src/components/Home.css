@@ -1,36 +1,89 @@
-.all{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
-    background: linear-gradient(violet,white,skyblue);
+/* ── Home Page ── */
+.all {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 24px;
+  background: linear-gradient(135deg, violet, #fff, skyblue);
+  min-height: 100vh;
 }
-.all >div{
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #fff;
-    box-shadow: 2px 3px 4px black;
+
+.all > div {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
-h3{
-    font-weight: bold;
-    text-transform: capitalize;
-    font-size: 23px;
-    letter-spacing: 1.2px;
+
+.all > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.2);
 }
-img{
-    width: 30%;
+
+.all > div img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
 }
-button{
-    font-weight: bold;
-    text-transform: capitalize;
-    font-size: 23px;
-    padding: 4px;
-    margin-bottom: 7px;
-    border-radius: 10px;
-    background-color: tomato;
+
+.all > div h3 {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #333;
+}
+
+.all > div button {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 0.95rem;
+  padding: 8px 18px;
+  margin-bottom: 7px;
+  border-radius: 10px;
+  background-color: tomato;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+  width: 100%;
+}
+
+.all > div button:hover {
+  background-color: #e03c2e;
+  transform: scale(1.03);
+}
+
+/* ── Tablet: 2 columns ── */
+@media (max-width: 1024px) {
+  .all {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 18px;
+  }
+}
+
+/* ── Mobile: 1 column ── */
+@media (max-width: 600px) {
+  .all {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 12px;
+  }
+
+  .all > div img {
+    width: 100px;
+    height: 100px;
+  }
 }
