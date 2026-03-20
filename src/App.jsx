@@ -3,15 +3,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
+import OrderSuccess from "./components/OrderSuccess";
 export let myContext = createContext();
 function reducer(state, action) {
   switch (action.type) {
     case "all":
       return { ...state, allproduct: action.payload, loading: false };
-      case "cart":
-        return {...state,cart:[...state.cart,action.payload]};
-        case "remove" :
-          return {...state,cart:action.payload}
+    case "cart":
+      return { ...state, cart: [...state.cart, action.payload] };
+    case "remove":
+      return { ...state, cart: action.payload };
+    case "clearCart":
+      return { ...state, cart: [] };
   }
 }
 
@@ -27,8 +31,11 @@ const App = () => {
     {
       path: "/",
       element: <Nav></Nav>,
-      children: [{ index: true, element: <Home></Home> },
-        {path:"cart",element:<Cart></Cart>}
+      children: [
+        { index: true, element: <Home></Home> },
+        { path: "cart", element: <Cart></Cart> },
+        { path: "checkout", element: <Checkout></Checkout> },
+        { path: "order-success", element: <OrderSuccess></OrderSuccess> },
       ],
     },
   ]);
